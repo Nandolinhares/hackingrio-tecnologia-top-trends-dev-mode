@@ -4,7 +4,7 @@ class FisicasController < ApplicationController
   # GET /fisicas
   # GET /fisicas.json
   def index
-    @fisicas = Fisica.all
+    @fisicas = Fisica.all.order(:nome)
   end
 
   # GET /fisicas/1
