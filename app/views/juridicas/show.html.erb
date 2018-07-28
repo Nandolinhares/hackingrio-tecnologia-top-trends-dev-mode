@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @juridica.cnpj %>
+</p>
+
+<p>
+  <strong>Razao:</strong>
+  <%= @juridica.razao %>
+</p>
+
+<p>
+  <strong>Fantasia:</strong>
+  <%= @juridica.fantasia %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @juridica.telefone %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @juridica.endereco %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @juridica.token %>
+</p>
+
+<%= link_to 'Edit', edit_juridica_path(@juridica) %> |
+<%= link_to 'Back', juridicas_path %>

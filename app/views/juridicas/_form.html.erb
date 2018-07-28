@@ -1,0 +1,47 @@
+<%= form_with(model: juridica, local: true) do |form| %>
+  <% if juridica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(juridica.errors.count, "error") %> prohibited this juridica from being saved:</h2>
+
+      <ul>
+      <% juridica.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :razao %>
+    <%= form.text_field :razao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fantasia %>
+    <%= form.text_field :fantasia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :token %>
+    <%= form.text_field :token %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
