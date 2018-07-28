@@ -25,29 +25,22 @@ class FisicasController < ApplicationController
   # POST /fisicas.json
   def create
     @fisica = Fisica.new(fisica_params)
-
-    respond_to do |format|
-      if @fisica.save
-        format.html { redirect_to @fisica, notice: 'Fisica was successfully created.' }
-        format.json { render :show, status: :created, location: @fisica }
-      else
-        format.html { render :new }
-        format.json { render json: @fisica.errors, status: :unprocessable_entity }
-      end
+    if @fisica.save
+      flash[:notice] = "Pessoa Jurídica cadastrada com sucesso"
+      redirect_to fisicas_path
+    else
+      renderiza (:new)  
     end
   end
 
   # PATCH/PUT /fisicas/1
   # PATCH/PUT /fisicas/1.json
   def update
-    respond_to do |format|
-      if @fisica.update(fisica_params)
-        format.html { redirect_to @fisica, notice: 'Fisica was successfully updated.' }
-        format.json { render :show, status: :ok, location: @fisica }
-      else
-        format.html { render :edit }
-        format.json { render json: @fisica.errors, status: :unprocessable_entity }
-      end
+    if @fisica.update fisica_params
+      flash[:notice] = "As informações da Pessoa Jurídica foram atualizadas com sucesso"
+      redirect_to fisicas_path
+    else
+      renderiza (:edit)  
     end
   end
 
@@ -56,7 +49,7 @@ class FisicasController < ApplicationController
   def destroy
     @fisica.destroy
     respond_to do |format|
-      format.html { redirect_to fisicas_url, notice: 'Fisica was successfully destroyed.' }
+      format.html { redirect_to fisicas_url, notice: 'A Pessoa Física foi deletada do Banco de Dados.' }
       format.json { head :no_content }
     end
   end
@@ -65,6 +58,10 @@ class FisicasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_fisica
       @fisica = Fisica.find(params[:id])
+    end
+
+    def renderiza(view)
+      render view
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

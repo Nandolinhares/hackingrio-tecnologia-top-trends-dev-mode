@@ -1,4 +1,8 @@
 
+   <% @fisica.errors.full_messages.each do |message| %>
+    <li class="alert alert-danger" role="alert"><%= message %></li>
+   <% end %> 
+
 <%= form_for @fisica, html: {multipart: true} do |form|%>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -7,7 +11,7 @@
     </div>
   </div>  
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3"> 
       <%= form.label :cpf, "CPF" %>
       <%= form.text_field :cpf, class: "form-control", placeholder: "Digite seu CPF" %>
     </div>
