@@ -45,12 +45,21 @@
 	color: #fff !important;
 }
 
-/*Corpo do site*/
+					/*Corpo do site*/
+
+/*Centralizando os Títulos de cada página*/
 
 h1{
 	text-align: center;
 }
+
+/*Centraliazndo os botoes*/
 .botoes_center{
 	margin: 0 auto;
+	display: table;
+}
+
+.botao_texto_da_acao{
+	margin: 20px auto;
 	display: table;
 }
