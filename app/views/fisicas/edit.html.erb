@@ -1,6 +1,6 @@
-<h1>Editing Fisica</h1>
+<h1>Editar Pessoa Fisica</h1>
 
-<%= render 'form', fisica: @fisica %>
+<%= render partial: "form", locals:{texto_da_acao: "Atualizar"} %> <!-- Renderiza a partial _form.html.erb -->
 
-<%= link_to 'Show', @fisica %> |
-<%= link_to 'Back', fisicas_path %>
+<%= link_to 'Visualizar', @fisica %> |
+<%= link_to 'Voltar', fisicas_path, class:"btn btn-secondary"%>

@@ -1,5 +1,5 @@
-<h1>New Fisica</h1>
+<h1>Adicionar pessoa jurídica</h1>
 
-<%= render 'form', fisica: @fisica %>
+<%= render partial: "form", locals:{texto_da_acao: "Cadastrar"} %> <!-- Renderiza a partial _form.html.erb -->
 
-<%= link_to 'Back', fisicas_path %>
+<%= link_to 'Voltar', fisicas_path, class: "btn btn-primary" %>
