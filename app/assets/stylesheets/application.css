@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ 						/*Header style*/
+
+
+/*Background do Navbar*/
+
+ .navbar-default{
+ 	background-color: #4682B4; 
+ }
+
+/*Cor dos itens do menu + background do menu ativo*/
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	color: #fff;
+	background-color: #2271A1;
+}
+
+/*Cor dos itens do menu*/
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+}
+.navbar-default .navbar-brand{
+	color: #fff;
+}

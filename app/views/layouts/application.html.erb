@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hackingrio</title>
+    <title>CheckIn</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,9 +10,12 @@
   </head>
 
   <body>
+
+    <!-- Navbar CheckIn -->
+
      <%= nav_bar brand: "CheckIn", brand_link: root_path, responsive: true, class:"navbar_main" do %>
         <%= menu_group do %>
-            <%= menu_item "Home", root_path %>
+            <%= menu_item "Página Inicial", root_path %>
             <%= menu_item "Pessoa Física", fisicas_path %>
             <%= menu_item "Pessoa Juridica", juridicas_path %>            
         <% end %>
