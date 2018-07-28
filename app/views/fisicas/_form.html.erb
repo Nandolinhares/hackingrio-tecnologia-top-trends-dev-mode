@@ -1,37 +1,37 @@
-<%= form_with(model: fisica, local: true) do |form| %>
-  <% if fisica.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(fisica.errors.count, "error") %> prohibited this fisica from being saved:</h2>
 
-      <ul>
-      <% fisica.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+   <% @fisica.errors.full_messages.each do |message| %>
+    <li class="alert alert-danger" role="alert"><%= message %></li>
+   <% end %> 
+
+<%= form_for @fisica, html: {multipart: true} do |form|%>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form.label :nome %>
+      <%= form.text_field :nome, class: "form-control", placeholder: "Digite seu nome" %>
     </div>
-  <% end %>
+  </div>  
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3"> 
+      <%= form.label :cpf, "CPF" %>
+      <%= form.text_field :cpf, class: "form-control", placeholder: "Digite seu CPF" %>
+    </div>
+  </div>  
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form.label :telefone, "Telefone com DDD" %>
+      <%= form.text_field :telefone, class: "form-control", placeholder:"Digite seu número" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf %>
-  </div>
+   <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form.label :endereco, "Endereço" %>
+        <%= form.text_field :endereco, class: "form-control", placeholder:"Digite seu endereço" %>
+      </div>
+   </div>
 
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.text_field :telefone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :endereco %>
-    <%= form.text_field :endereco %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="botao_texto_da_acao">
+    <%= form.submit texto_da_acao, class:"btn btn-success" %>
   </div>
 <% end %>

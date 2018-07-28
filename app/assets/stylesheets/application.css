@@ -13,3 +13,56 @@
  *= require_tree .
  *= require_self
  */
+
+ 						/*Header style*/
+
+
+/*Background do Navbar*/
+
+ .navbar-default{
+ 	background-color: #4682B4; 
+ }
+
+/*Cor dos itens do menu + background do menu ativo*/
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	color: #fff;
+	background-color: #2271A1;
+}
+
+/*Cor dos itens do menu*/
+
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
+	font-size: 18px;
+}
+.navbar-default .navbar-brand{
+	color: #fff;
+}
+
+/*Efeito Hover do menu*/
+.navbar-nav>li>a:hover{
+	background-color: #2271A1 !important; 
+	color: #fff !important;
+}
+
+					/*Corpo do site*/
+
+/*Centralizando os Títulos de cada página*/
+
+h1{
+	text-align: center;
+}
+
+/*Centraliazndo os botoes*/
+.botoes_center{
+	margin: 12px auto;
+	display: table;
+}
+
+.botao_texto_da_acao{
+	margin: 20px auto;
+	display: table;
+}
+.botoes_index{
+	width: 10%;
+}
