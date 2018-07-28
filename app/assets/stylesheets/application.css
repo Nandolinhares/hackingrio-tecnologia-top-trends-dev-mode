@@ -20,13 +20,13 @@
 /*Background do Navbar*/
 
  .navbar-default{
- 	background-color: #4682B4; 
+ 	background-color: #67b7b3; 
  }
 
 /*Cor dos itens do menu + background do menu ativo*/
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
 	color: #fff;
-	background-color: #2271A1;
+	background-color: #5caaa6;
 }
 
 /*Cor dos itens do menu*/
@@ -41,7 +41,7 @@
 
 /*Efeito Hover do menu*/
 .navbar-nav>li>a:hover{
-	background-color: #2271A1 !important; 
+	background-color: #5caaa6 !important; 
 	color: #fff !important;
 }
 
@@ -59,10 +59,23 @@ h1{
 	display: table;
 }
 
+/*Texto responsável por Cadastrar e Atualizar*/
+
 .botao_texto_da_acao{
 	margin: 20px auto;
 	display: table;
 }
+
+/*Botões da tabela (Visualizar, editar, deletar)*/
+
 .botoes_index{
 	width: 10%;
+}
+
+.logo_position{
+	margin: 0 auto;
+	display: table;
+}
+.menuzin{
+	margin-left: 40px !important;
 }

@@ -4,7 +4,7 @@ class JuridicasController < ApplicationController
   # GET /juridicas
   # GET /juridicas.json
   def index
-    @juridicas = Juridica.all
+    @juridicas = Juridica.all.order(:razao)
   end
 
   # GET /juridicas/1
@@ -28,7 +28,7 @@ class JuridicasController < ApplicationController
 
     respond_to do |format|
       if @juridica.save
-        format.html { redirect_to @juridica, notice: 'Juridica was successfully created.' }
+        format.html { redirect_to @juridica, notice: 'Pessoa Jurídica criada com sucesso!' }
         format.json { render :show, status: :created, location: @juridica }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class JuridicasController < ApplicationController
   def update
     respond_to do |format|
       if @juridica.update(juridica_params)
-        format.html { redirect_to @juridica, notice: 'Juridica was successfully updated.' }
+        format.html { redirect_to @juridica, notice: 'Pessoa Jurídica foi atualizada com sucesso.' }
         format.json { render :show, status: :ok, location: @juridica }
       else
         format.html { render :edit }

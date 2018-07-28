@@ -12,10 +12,33 @@
   <body>
 
     <!-- Navbar CheckIn -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand menuzin" href="<%= root_url %>"><%= image_tag("checkin.jpg", size: "140x30") %></a>
+          </div>
 
-     <%= nav_bar brand: "CheckIn", brand_link: root_path, responsive: true, class:"navbar_main" do %>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-right" id="bs-example-navbar-collapse-1">
+          
+             <%= menu_group do %>
+            
+              <%= menu_item "Pessoa Física", fisicas_path %>
+              <%= menu_item "Pessoa Jurídica", juridicas_path %>
+            <%end%>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+     <%= nav_bar brand_photo: "checkin.jpg", responsive: true, class:"navbar_main" do %>
         <%= menu_group do %>
-            <%= menu_item "Página Inicial", root_path %>
             <%= menu_item "Pessoa Física", fisicas_path %>
             <%= menu_item "Pessoa Juridica", juridicas_path %>            
         <% end %>

@@ -1,36 +1,54 @@
+<!-- Se tem algum resultado(criação ou atualização, ele vai mandar a mensagem 
+  respectiva ao assunto. "Criado com sucesso ou Atualizado com sucesso") -->
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Cnpj:</strong>
-  <%= @juridica.cnpj %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>CNPJ:</label>
+    <input type="text" name="cnpj" class="form-control" disabled="disabled" value="<%= @juridica.cnpj%>">
+  </div> 
+</div>
 
-<p>
-  <strong>Razao:</strong>
-  <%= @juridica.razao %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Razão Social:</label>
+    <input type="text" name="razao" class="form-control" disabled="disabled" value="<%= @juridica.razao%>">
+  </div> 
+</div>
 
-<p>
-  <strong>Fantasia:</strong>
-  <%= @juridica.fantasia %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Nome Fantasia:</label>
+    <input type="text" name="fantasia" class="form-control" disabled="disabled" value="<%= @juridica.fantasia%>">
+  </div> 
+</div>
 
-<p>
-  <strong>Telefone:</strong>
-  <%= @juridica.telefone %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Telefone:</label>
+    <input type="text" name="telefone" class="form-control" disabled="disabled" value="<%= @juridica.telefone%>">
+  </div> 
+</div>
 
-<p>
-  <strong>Endereco:</strong>
-  <%= @juridica.endereco %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Endereço:</label>
+    <input type="text" name="endereco" class="form-control" disabled="disabled" value="<%= @juridica.endereco%>">
+  </div> 
+</div>
 
-<p>
-  <strong>Token:</strong>
-  <%= @juridica.token %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Token:</label>
+    <input type="text" name="token" class="form-control" disabled="disabled" value="<%= @juridica.token%>">
+  </div> 
+</div>
 
-<%= link_to 'Edit', edit_juridica_path(@juridica) %> |
-<%= link_to 'Back', juridicas_path %>
+
+<div class="botoes_center">
+  <%= link_to 'Editar', edit_juridica_path(@juridica), class: "btn btn-default" %> |
+  <%= link_to 'Voltar', juridicas_path, class: "btn btn-default" %>
+</div>
 
 <%= render template: 'socios/index'%>

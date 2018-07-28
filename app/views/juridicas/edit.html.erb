@@ -1,6 +1,8 @@
 <h1>Editing Juridica</h1>
 
-<%= render 'form', juridica: @juridica %>
+<%= render partial:"form", locals:{texto_da_acao: "Atualizar"} %> %> <!-- Renderiza a partial _form.html.erb (Conteúdo)-->
 
-<%= link_to 'Show', @juridica %> |
-<%= link_to 'Back', juridicas_path %>
+<div class="botoes_center">
+	<%= link_to 'Visualizar', @juridica, class: "btn btn-default " %> |
+	<%= link_to 'Voltar', juridicas_path, class: "btn btn-default " %>
+</div>
