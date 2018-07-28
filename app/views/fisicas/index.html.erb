@@ -1,6 +1,12 @@
+
+<!-- Se tem algum resultado(criação ou atualização, ele vai mandar a mensagem 
+  respectiva ao assunto. "Criado com sucesso ou Atualizado com sucesso") -->
+
 <% if flash[:notice] %>
   <div class="alert alert-success" role="alert"><%= flash[:notice] %></div>
 <% end %>
+
+<!-- Título -->
 
 <h1>Pessoas Fisicas</h1>
 
@@ -15,6 +21,8 @@
       <th class="botoes_index">Deletar</th>
     </tr>
   </thead>
+
+<!-- Para cada cadastro que tem no banco de dados, vai ser mostrada as informações cadastradas -->
 
   <tbody>
     <% @fisicas.each do |fisica| %>

@@ -24,23 +24,28 @@ class FisicasController < ApplicationController
   # POST /fisicas
   # POST /fisicas.json
   def create
-    @fisica = Fisica.new(fisica_params)
-    if @fisica.save
-      flash[:notice] = "Pessoa Jurídica cadastrada com sucesso"
-      redirect_to fisicas_path
-    else
-      renderiza (:new)  
+    respond_to do |format|
+      if @fisica.update(juridica_params)
+        format.html { redirect_to @fisica, notice: 'Pessoa Física criada com sucesso.' }
+        format.json { render :show, status: :created, location: @fisica }
+      else
+        format.html { render :new }
+        format.json { render json: @fisica.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   # PATCH/PUT /fisicas/1
   # PATCH/PUT /fisicas/1.json
   def update
-    if @fisica.update fisica_params
-      flash[:notice] = "As informações da Pessoa Jurídica foram atualizadas com sucesso"
-      redirect_to fisicas_path
-    else
-      renderiza (:edit)  
+   respond_to do |format|
+      if @fisica.update(fisica_params)
+        format.html { redirect_to @fisica, notice: 'Pessoa Física foi atualizada com sucesso.' }
+        format.json { render :show, status: :ok, location: @fisica }
+      else
+        format.html { render :edit }
+        format.json { render json: @fisica.errors, status: :unprocessable_entity }
+      end
     end
   end
 

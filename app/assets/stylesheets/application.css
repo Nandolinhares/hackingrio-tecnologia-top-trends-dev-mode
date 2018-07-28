@@ -59,10 +59,15 @@ h1{
 	display: table;
 }
 
+/*Texto responsável por Cadastrar e Atualizar*/
+
 .botao_texto_da_acao{
 	margin: 20px auto;
 	display: table;
 }
+
+/*Botões da tabela (Visualizar, editar, deletar)*/
+
 .botoes_index{
 	width: 10%;
 }
