@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @fisica.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @fisica.cpf %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @fisica.telefone %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @fisica.endereco %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @fisica.token %>
+</p>
+
+<%= link_to 'Edit', edit_fisica_path(@fisica) %> |
+<%= link_to 'Back', fisicas_path %>
