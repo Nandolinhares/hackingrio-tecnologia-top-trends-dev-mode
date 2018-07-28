@@ -71,3 +71,8 @@ h1{
 .botoes_index{
 	width: 10%;
 }
+
+.logo_position{
+	margin: 0 auto;
+	display: table;
+}
