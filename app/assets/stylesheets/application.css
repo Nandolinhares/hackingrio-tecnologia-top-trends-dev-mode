@@ -55,11 +55,14 @@ h1{
 
 /*Centraliazndo os botoes*/
 .botoes_center{
-	margin: 0 auto;
+	margin: 12px auto;
 	display: table;
 }
 
 .botao_texto_da_acao{
 	margin: 20px auto;
 	display: table;
+}
+.botoes_index{
+	width: 10%;
 }

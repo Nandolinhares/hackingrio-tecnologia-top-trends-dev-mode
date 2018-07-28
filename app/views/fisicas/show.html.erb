@@ -1,29 +1,43 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+  <div class="alert alert-success" role="alert"><%= flash[:notice] %></div>
+<% end %>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @fisica.nome %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Nome:</label>
+    <input type="text" name="nome" class="form-control" disabled="disabled" value="<%= @fisica.nome%>">
+  </div>
+</div>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @fisica.cpf %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>CPF:</label>
+    <input type="text" name="cpf" class="form-control" disabled="disabled" value="<%= @fisica.cpf%>">
+  </div>
+</div>
 
-<p>
-  <strong>Telefone:</strong>
-  <%= @fisica.telefone %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Telefone:</label>
+    <input type="text" name="telefone" class="form-control" disabled="disabled" value="<%= @fisica.telefone%>">
+  </div>
+</div>
 
-<p>
-  <strong>Endereco:</strong>
-  <%= @fisica.endereco %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Endereço:</label>
+    <input type="text" name="endereco" class="form-control" disabled="disabled" value="<%= @fisica.endereco%>">
+  </div>
+</div>
 
-<p>
-  <strong>Token:</strong>
-  <%= @fisica.token %>
-</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <label>Nome:</label>
+    <input type="text" name="token" class="form-control" disabled="disabled" value="<%= @fisica.token%>">
+  </div>
+</div>
 
-<%= link_to 'Editar', edit_fisica_path(@fisica) %> |
-<%= link_to 'Voltar', fisicas_path %>
+<div class="botoes_center">
+  <%= link_to 'Editar', edit_fisica_path(@fisica), class: "btn btn-default" %> |
+  <%= link_to 'Voltar', fisicas_path, class: "btn btn-default" %>
+</div>

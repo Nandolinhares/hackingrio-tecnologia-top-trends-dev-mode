@@ -8,13 +8,11 @@
   <thead class="table thead-dark">
     <tr>
       <th>Nome</th>
-      <th>Cpf</th>
+      <th>CPF</th>
       <th>Telefone</th>
-      <th>Endereco</th>
-      <th>Token</th>
-      <th>Visualizar</th>
-      <th>Editar</th>
-      <th>Deletar</th>
+      <th class="botoes_index">Visualizar</th>
+      <th class="botoes_index">Editar</th>
+      <th class="botoes_index">Deletar</th>
     </tr>
   </thead>
 
@@ -24,8 +22,6 @@
         <td><%= fisica.nome %></td>
         <td><%= fisica.cpf %></td>
         <td><%= fisica.telefone %></td>
-        <td><%= fisica.endereco %></td>
-        <td><%= fisica.token %></td>
         <td><%= link_to 'Visualizar', fisica, class: "btn btn-success botoes_fisicas" %></td>
         <td><%= link_to 'Editar', edit_fisica_path(fisica), class: "btn btn-warning botoes_fisicas" %></td>
         <td><%= link_to 'Deletar', fisica, method: :delete, data: { confirm: "Tem certeza que deseja deletar #{fisica.nome} do banco de dados de pessoas físicas?" }, class: "btn btn-danger botoes_fisicas" %></td>
@@ -36,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Fisica', new_fisica_path %>
+<%= link_to 'Adicionar Pessoa Física', new_fisica_path, class: "btn btn-primary botoes_fisicas" %>
