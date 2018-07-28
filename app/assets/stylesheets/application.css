@@ -30,9 +30,17 @@
 }
 
 /*Cor dos itens do menu*/
+
 .navbar-default .navbar-nav>li>a {
 	color: #fff;
+	font-size: 18px;
 }
 .navbar-default .navbar-brand{
 	color: #fff;
+}
+
+/*Efeito Hover do menu*/
+.navbar-nav>li>a:hover{
+	background-color: #2271A1 !important; 
+	color: #fff !important;
 }
