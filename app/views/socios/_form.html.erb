@@ -1,0 +1,40 @@
+<%= form_with(model: @socio, url: (@socio.new_record? ? [@juridica, @socio]: @juridica)) do |form| %>
+  <% if socio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(socio.errors.count, "error") %> prohibited this socio from being saved:</h2>
+
+      <ul>
+      <% socio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :administrador %>
+    <%= form.check_box :administrador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fisica_id %>
+    <%= form.text_field :fisica_id %>
+  </div>
+
+  <div class="field">
+    <label>Razão Social:</label>
+    <input type="text" name="token" class="form-control" disabled="disabled" value="<%= @juridica.razao %>">
+  </div>
+
+  <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    
+  </div>
+</div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', juridica_path(@juridica) %>

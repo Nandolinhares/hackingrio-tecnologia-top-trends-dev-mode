@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  administrador: false
+  token: MyString
+  fisica: one
+  juridica: one
+
+two:
+  administrador: false
+  token: MyString
+  fisica: two
+  juridica: two

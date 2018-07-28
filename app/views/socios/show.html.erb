@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Administrador:</strong>
+  <%= @socio.administrador %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @socio.token %>
+</p>
+
+<p>
+  <strong>Fisica:</strong>
+  <%= @socio.fisica %>
+</p>
+
+<p>
+  <strong>Juridica:</strong>
+  <%= @socio.juridica %>
+</p>
+
+<%= link_to 'Edit', edit_socio_path(@socio) %> |
+<%= link_to 'Back', socios_path %>
