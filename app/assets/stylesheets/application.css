@@ -44,3 +44,13 @@
 	background-color: #2271A1 !important; 
 	color: #fff !important;
 }
+
+/*Corpo do site*/
+
+h1{
+	text-align: center;
+}
+.botoes_center{
+	margin: 0 auto;
+	display: table;
+}
