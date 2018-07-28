@@ -816,3 +816,190 @@ Processing by FisicasController#index as HTML
 Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:40:13 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nandogun/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (0.5ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 587ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x0000560e07df0870>:0x0000560e07d69c08>
+Did you mean?  font_path):
+    11: 
+    12:   <body>
+    13: 
+    14:     <%= nav_bar brand: "CheckIn", brand_link: root_path, responsive: true, class:"navbar_main" do %>
+    15:         <%= menu_group do %>
+    16:             <%= menu_item "Home", root_path %>
+    17:             <%= menu_item "Pessoa Física", fisicas_path %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__2202076167204699457_47309129940820'
+Started GET "/" for 127.0.0.1 at 2018-07-28 11:40:21 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nandogun/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nandogun/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:40:35 -0300
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (1.3ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x0000560e07df0870>:0x00007fe6ce2acc10>
+Did you mean?  font_path):
+    11: 
+    12:   <body>
+    13: 
+    14:     <%= nav_bar brand: "CheckIn", brand_link: root_path, responsive: true, class:"navbar_main" do %>
+    15:         <%= menu_group do %>
+    16:             <%= menu_item "Home", root_path %>
+    17:             <%= menu_item "Pessoa Física", fisicas_path %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__2202076167204699457_70314639129480'
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:40:51 -0300
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (0.4ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:17: syntax error, unexpected ')'
+... menu_item "Pessoa Física",  );@output_buffer.safe_append='
+...                              ^
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:18: syntax error, unexpected ')'
+...menu_item "Pessoa Juridica",  );@output_buffer.safe_append='...
+...                              ^
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/layouts/application.html.erb:17: syntax error, unexpected ')'
+app/views/layouts/application.html.erb:18: syntax error, unexpected ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/application.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:40:57 -0300
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (0.3ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x0000560e07df0870>:0x00007fe6c86cc5d0>
+Did you mean?  font_path):
+    11: 
+    12:   <body>
+    13: 
+    14:     <%= nav_bar brand: "CheckIn", brand_link: root_path, responsive: true, class:"navbar_main" do %>
+    15:         <%= menu_group do %>
+    16:             <%= menu_item "Home", root_path %>
+    17:             <%= menu_item "Pessoa Física"  %>
+  
+app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__2202076167204699457_70314590706640'
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:41:37 -0300
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (0.5ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:14: syntax error, unexpected ','
+...brand: "CheckIn", brand_link: , responsive: true, class:"nav...
+...                              ^
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:14: Can't assign to true
+...brand_link: , responsive: true, class:"navbar_main" do @outp...
+...                              ^
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:14: syntax error, unexpected keyword_do_block, expecting keyword_end
+...e: true, class:"navbar_main" do @output_buffer.safe_append='
+...                             ^~
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:15: syntax error, unexpected keyword_do_block, expecting keyword_end
+...t_buffer.append=  menu_group do @output_buffer.safe_append='
+...                             ^~
+/home/nandogun/Projetos/HackInRio/hackingrio-tecnologia-top-trends-dev-mode/app/views/layouts/application.html.erb:21: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze;     end 
+              ^~~):
+  
+app/views/layouts/application.html.erb:14: syntax error, unexpected ','
+app/views/layouts/application.html.erb:14: Can't assign to true
+app/views/layouts/application.html.erb:14: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/application.html.erb:15: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/layouts/application.html.erb:21: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:42:22 -0300
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (0.5ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fisicas/new" for 127.0.0.1 at 2018-07-28 11:42:27 -0300
+Processing by FisicasController#new as HTML
+  Rendering fisicas/new.html.erb within layouts/application
+  Rendered fisicas/_form.html.erb (137.0ms)
+  Rendered fisicas/new.html.erb within layouts/application (138.1ms)
+Completed 200 OK in 181ms (Views: 169.1ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/fisicas" for 127.0.0.1 at 2018-07-28 11:42:45 -0300
+Processing by FisicasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5P77//YFNn6gs6AjUmwNOpxbVhMwO8Ta8Z9+YYPGUAq2FSuUQhjuu+I/flclK2Cc36mun55F5BsFRa96qDuvhQ==", "fisica"=>{"nome"=>"Fernando", "cpf"=>"15561665165", "telefone"=>"22997072417", "endereco"=>"uwftwfwu", "token"=>"1561651651"}, "commit"=>"Create Fisica"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fisicas_controller.rb:30
+  [1m[36mFisica Create (0.5ms)[0m  [1m[32mINSERT INTO "fisicas" ("nome", "cpf", "telefone", "endereco", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["nome", "Fernando"], ["cpf", "15561665165"], ["telefone", "22997072417"], ["endereco", "uwftwfwu"], ["token", "1561651651"], ["created_at", "2018-07-28 14:42:45.685788"], ["updated_at", "2018-07-28 14:42:45.685788"]]
+  ↳ app/controllers/fisicas_controller.rb:30
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fisicas_controller.rb:30
+Redirected to http://localhost:3000/fisicas/1
+Completed 302 Found in 38ms (ActiveRecord: 34.4ms)
+
+
+Started GET "/fisicas/1" for 127.0.0.1 at 2018-07-28 11:42:45 -0300
+Processing by FisicasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFisica Load (0.2ms)[0m  [1m[34mSELECT  "fisicas".* FROM "fisicas" WHERE "fisicas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/fisicas_controller.rb:67
+  Rendering fisicas/show.html.erb within layouts/application
+  Rendered fisicas/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 109ms (Views: 27.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fisicas" for 127.0.0.1 at 2018-07-28 11:42:49 -0300
+Processing by FisicasController#index as HTML
+  Rendering fisicas/index.html.erb within layouts/application
+  [1m[36mFisica Load (0.7ms)[0m  [1m[34mSELECT "fisicas".* FROM "fisicas"[0m
+  ↳ app/views/fisicas/index.html.erb:18
+  Rendered fisicas/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.7ms)
+
+
