@@ -1,3 +1,22 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ .menu{
+ 	visibility: hidden;
+ }
+
+ .checkin2{
+ 	margin: 40px auto;
+ 	display: table;
+ }
+
+ .botoes_home{
+	color:#fff !important;
+	margin: 0 auto;
+	display: table;
+	padding-right: 14%;
+	padding-left: 14%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	border-radius: 32px;
+}
