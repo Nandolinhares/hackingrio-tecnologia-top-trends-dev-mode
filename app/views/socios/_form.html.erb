@@ -1,10 +1,10 @@
 <%= form_with(model: @socio, url: ([@juridica, @socio])) do |form| %>
-  <% if socio.errors.any? %>
+  <% if @socio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(socio.errors.count, "error") %> prohibited this socio from being saved:</h2>
 
       <ul>
-      <% socio.errors.full_messages.each do |message| %>
+      <% @socio.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -32,9 +32,9 @@
   </div>
 </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="botao_texto_da_acao">
+    <%= form.submit texto_da_acao, class: "btn btn-view botoes_socios"%>
   </div>
 <% end %>
 
-<%= link_to 'Back', juridica_path(@juridica) %>
+<%= link_to 'Voltar', juridica_path(@juridica), class: "btn btn-default" %>
