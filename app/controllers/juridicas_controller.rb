@@ -59,7 +59,7 @@ class JuridicasController < ApplicationController
   def destroy
     @juridica.destroy
     respond_to do |format|
-      format.html { redirect_to juridicas_url, notice: 'Juridica was successfully destroyed.' }
+      format.html { redirect_to juridicas_url, notice: 'Pessoa Jurídica deletada com sucesso' }
       format.json { head :no_content }
     end
   end
