@@ -1,3 +1,6 @@
+
+<!-- Se encontrar algum tipo de erro durante o procedimento, então será emitida uma mensagem -->
+
 <%= form_with(model: @socio, url: ([@juridica, @socio])) do |form| %>
   <% if @socio.errors.any? %>
     <div id="error_explanation">

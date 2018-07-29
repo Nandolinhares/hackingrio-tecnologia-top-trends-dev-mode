@@ -1,4 +1,5 @@
-
+<!-- Se tem algum resultado(criação ou atualização, ele vai mandar a mensagem 
+  respectiva ao assunto. "Criado com sucesso ou Atualizado com sucesso") -->
 
 <p id="notice"><%= notice %></p>
 
@@ -16,6 +17,8 @@
       <th class="botoes_index" colspan="3"></th>
     </tr>
   </thead>
+
+  <!-- Para cada cadastro que tem no banco de dados, vai ser mostrada as informações cadastradas -->
 
   <tbody>
     <% @juridicas.each do |juridica| %>

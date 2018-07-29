@@ -1,6 +1,10 @@
+  <!-- Se encontrar algum erro durante o procedimento, emite uma mensagem de erro -->
+
   <% @juridica.errors.full_messages.each do |message| %>
     <li class="alert alert-danger" role="alert"><%= message %></li>
    <% end %> 
+
+<!-- Formulário para criação de Pessoa Jurídica9 -->
 
 <%= form_for @juridica, html:{multipart:true} do |form| %>
 
@@ -38,6 +42,8 @@
       <%= form.text_field :endereco, class: "form-control", placeholder: "Digite o endereço" %>
     </div>
   </div> 
+
+<!-- Botão para submit -->
 
   <div class="botao_texto_da_acao">
     <%= form.submit texto_da_acao, class: "btn btn-view botoes_juridicas" %>

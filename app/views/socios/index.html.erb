@@ -1,6 +1,11 @@
+
+<!-- Se tiver alguma mensagem para ser apresentada, então será emitida -->
+
 <p id="notice"><%= notice %></p>
 
 <h2 id="h2_socios">Socios</h2>
+
+<!-- Tabela para apresentar os dados cadastrados dos sócios -->
 
 <div class="table-responsive">
   <table class="table table-bordered table-dark">
@@ -15,6 +20,7 @@
 
 <%= link_to 'Adicionar Sócio', new_juridica_socio_path(@juridica), class: "btn btn-view botoes_socios botao_add" %>
 
+<!-- Se tem dados, então serão apresentados -->
 
   <tbody>
     <% @juridica.socios.each do |socio| %>

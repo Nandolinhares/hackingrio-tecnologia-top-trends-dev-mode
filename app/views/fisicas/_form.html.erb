@@ -1,7 +1,11 @@
 
+  <!-- Se encontrar algum erro durante o procedimento, emite uma mensagem de erro -->
+
    <% @fisica.errors.full_messages.each do |message| %>
     <li class="alert alert-danger" role="alert"><%= message %></li>
    <% end %> 
+
+   <!-- Formulário de cadastro de Pessoa Física -->
 
 <%= form_for @fisica, html: {multipart: true} do |form|%>
   <div class="row">
@@ -30,6 +34,8 @@
         <%= form.text_field :endereco, class: "form-control", placeholder:"Digite seu endereço" %>
       </div>
    </div>
+
+   <!-- Botão de cadastro, O "texto_da_acao foi programado para ter dois valores: Cadastrar e atualizar. Nas páginas Edit e New, o texto_da_acao recebe um dos valores respectivos ao seu ato." -->
 
   <div class="botao_texto_da_acao">
     <%= form.submit texto_da_acao, class:"btn btn-view botoes_fisicas" %>
