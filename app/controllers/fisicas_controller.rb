@@ -24,8 +24,10 @@ class FisicasController < ApplicationController
   # POST /fisicas
   # POST /fisicas.json
   def create
+    @fisica = Fisica.new(fisica_params)
+
     respond_to do |format|
-      if @fisica.update(juridica_params)
+      if @fisica.save
         format.html { redirect_to @fisica, notice: 'Pessoa Física criada com sucesso.' }
         format.json { render :show, status: :created, location: @fisica }
       else

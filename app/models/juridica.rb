@@ -4,8 +4,7 @@ class Juridica < ApplicationRecord
     validates_uniqueness_of :cnpj
     has_many :socios, dependent: :destroy
     
-    def self.tokenizer
-        juridica = Juridica.includes(:socios).last
+    def self.tokenizer(juridica)
         payload = { pessoa_juridica: "#{juridica.razao}",
                   cnpj: "#{juridica.cnpj}" }
         payload["socios"] = Array.new

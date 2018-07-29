@@ -1,5 +1,7 @@
 class JuridicasController < ApplicationController
   before_action :set_juridica, only: [:show, :edit, :update, :destroy]
+  #before_action :set_token, only: [:show]
+  after_action :set_juridica, only: [:set_juridica]
   after_action :set_token, only: [:create, :update]
 
   # GET /juridicas
@@ -69,8 +71,8 @@ class JuridicasController < ApplicationController
     end
 
     def set_token
-      @juridica = Juridica.tokenizer
-      @juridica.update!(juridica_params)
+      @juridica = Juridica.tokenizer( Juridica.includes(:socios).last )
+      @juridica.update(juridica_params)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

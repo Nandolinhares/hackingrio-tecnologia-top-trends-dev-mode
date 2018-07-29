@@ -29,7 +29,7 @@ class SociosController < ApplicationController
 
     respond_to do |format|
       if @socio.save
-        format.html { redirect_to juridica_path(@juridica), notice: 'Socio was successfully created.' }
+        format.html { redirect_to edit_juridica_path(@juridica), notice: 'Socio was successfully created.' }
         format.json { render :show, status: :created, location: @socio }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class SociosController < ApplicationController
   def update
     respond_to do |format|
       if @socio.update(socio_params)
-        format.html { redirect_to juridica_path(@juridica), notice: 'Socio was successfully updated.' }
+        format.html { redirect_to edit_juridica_path(@juridica), notice: 'Socio was successfully updated.' }
         format.json { render :show, status: :ok, location: @socio }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class SociosController < ApplicationController
   def destroy
     @socio.destroy
     respond_to do |format|
-      format.html { redirect_to juridica_path(@juridica), notice: 'Socio was successfully destroyed.' }
+      format.html { redirect_to edit_juridica_path(@juridica), notice: 'Socio was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -72,7 +72,7 @@ class SociosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_socio
       @socio = @juridica.socios.find(params[:id])
-    end
+    end    
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def socio_params
