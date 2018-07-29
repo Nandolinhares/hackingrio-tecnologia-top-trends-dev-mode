@@ -1,16 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Socios</h1>
+<h2 id="h2_socios">Socios</h2>
 
-<table>
+<div class="table-responsive">
+  <table class="table table-bordered table-dark">
   <thead>
     <tr>
       <th>Nome</th>
       <th>CPF</th>
       <th>Administrador</th>
-      <th colspan="3"></th>
+      <th class="botoes_index" colspan="3"></th>
     </tr>
   </thead>
+
+<%= link_to 'Adicionar Sócio', new_juridica_socio_path(@juridica), class: "btn btn-view botoes_socios botao_add" %>
+
 
   <tbody>
     <% @juridica.socios.each do |socio| %>
@@ -18,14 +22,18 @@
         <td><%= socio.fisica.nome %></td>
         <td><%= socio.fisica.cpf %></td>
         <td><%= socio.administrador ? 'Sim' : 'Não' %></td>   
-        <td><%= link_to 'Show', fisica_path(socio.fisica) %></td>
-        <td><%= link_to 'Edit', edit_juridica_socio_path(socio.juridica,socio) %></td>
-        <td><%= link_to 'Destroy', juridica_socio_path(socio.juridica,socio), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Abrir', fisica_path(socio.fisica), class: "btn btn-view botoes_socios" %>
+        </td>
+        <td><%= link_to 'Editar', edit_juridica_socio_path(socio.juridica,socio), class: "btn btn-edit botoes_socios" %></td>
+        <td><%= link_to 'Deletar', juridica_socio_path(socio.juridica,socio), method: :delete, data: { confirm: "Tem certeza que deseja remover #{socio.fisica.nome} do banco e dados ?" }, class: "btn btn-delete botoes_socios" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
+</div>
 <br>
 
-<%= link_to 'New Socio', new_juridica_socio_path(@juridica) %>
+
+
+

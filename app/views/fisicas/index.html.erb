@@ -17,9 +17,7 @@
       <th>Nome</th>
       <th>CPF</th>
       <th>Telefone</th>
-      <th class="botoes_index">Visualizar</th>
-      <th class="botoes_index">Editar</th>
-      <th class="botoes_index">Deletar</th>
+      <th class="botoes_index" colspan="3"></th>
     </tr>
   </thead>
 
@@ -31,9 +29,9 @@
         <td><%= fisica.nome %></td>
         <td><%= fisica.cpf %></td>
         <td><%= fisica.telefone %></td>
-        <td><%= link_to 'Visualizar', fisica, class: "btn btn-success botoes_fisicas" %></td>
-        <td><%= link_to 'Editar', edit_fisica_path(fisica), class: "btn btn-warning botoes_fisicas" %></td>
-        <td><%= link_to 'Deletar', fisica, method: :delete, data: { confirm: "Tem certeza que deseja deletar #{fisica.nome} do banco de dados de pessoas físicas?" }, class: "btn btn-danger botoes_fisicas" %></td>
+        <td><%= link_to 'Abrir', fisica, class: "btn btn-view botoes_fisicas" %></td>
+        <td><%= link_to 'Editar', edit_fisica_path(fisica), class: "btn btn-edit botoes_fisicas" %></td>
+        <td><%= link_to 'Deletar', fisica, method: :delete, data: { confirm: "Tem certeza que deseja deletar #{fisica.nome} do banco de dados de pessoas físicas?" }, class: "btn btn-delete botoes_fisicas" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +40,4 @@
 
 <br>
 
-<%= link_to 'Adicionar Pessoa Física', new_fisica_path, class: "btn btn-primary botoes_fisicas" %>
+<%= link_to 'Adicionar Pessoa Física', new_fisica_path, class: "btn btn-view botoes_fisicas" %>

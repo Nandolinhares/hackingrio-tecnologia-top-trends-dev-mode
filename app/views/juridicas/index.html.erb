@@ -9,9 +9,7 @@
       <th>Razao</th>
       <th>Fantasia</th>
       <th>Telefone</th>
-      <th class="botoes_index">Visualizar</th>
-      <th class="botoes_index">Editar</th>
-      <th class="botoes_index">Deletar</th>
+      <th class="botoes_index" colspan="3"></th>
     </tr>
   </thead>
 
@@ -22,9 +20,9 @@
         <td><%= juridica.razao %></td>
         <td><%= juridica.fantasia %></td>
         <td><%= juridica.telefone%></td>
-        <td><%= link_to 'Visualizar', juridica, class: "btn btn-success botoes_juridicas" %></td>
-        <td><%= link_to 'Editar', edit_juridica_path(juridica), class: "btn btn-warning botoes_juridicas" %></td>
-        <td><%= link_to 'Deletar', juridica, method: :delete, data: { confirm: "Você tem certeza que deseja deletar #{juridica.fantasia} do banco de dados ?" }, class: "btn btn-danger botoes_juridicas" %></td>
+        <td><%= link_to 'Abrir', juridica, class: "btn btn-view botoes_juridicas" %></td>
+        <td><%= link_to 'Editar', edit_juridica_path(juridica), class: "btn btn-edit botoes_juridicas" %></td>
+        <td><%= link_to 'Deletar', juridica, method: :delete, data: { confirm: "Você tem certeza que deseja deletar #{juridica.fantasia} do banco de dados ?" }, class: "btn btn-delete botoes_juridicas" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +30,4 @@
 
 <br>
 
-<%= link_to 'Adicionar Pessoa Jurídica', new_juridica_path, class: "btn btn-primary botoes_juridicas" %>
+<%= link_to 'Adicionar Pessoa Jurídica', new_juridica_path, class: "btn btn-view botoes_juridicas" %>
