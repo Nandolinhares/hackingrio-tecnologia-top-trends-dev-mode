@@ -1,5 +1,7 @@
 class FisicasController < ApplicationController
   before_action :set_fisica, only: [:show, :edit, :update, :destroy]
+  after_action :set_fisica, only: [:set_token]
+  after_action :set_token, only: [:create, :update]
 
   # GET /fisicas
   # GET /fisicas.json
@@ -67,8 +69,9 @@ class FisicasController < ApplicationController
       @fisica = Fisica.find(params[:id])
     end
 
-    def renderiza(view)
-      render view
+    def set_token
+      @fisica = Fisica.tokenizer( Fisica.find(params[:id])  )
+      @fisica.update(fisica_params)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
