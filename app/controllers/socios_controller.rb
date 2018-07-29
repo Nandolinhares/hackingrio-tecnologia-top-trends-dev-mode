@@ -72,7 +72,7 @@ class SociosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_socio
       @socio = @juridica.socios.find(params[:id])
-    end    
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def socio_params

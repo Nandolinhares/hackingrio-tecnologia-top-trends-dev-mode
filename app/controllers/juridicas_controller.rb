@@ -1,7 +1,6 @@
 class JuridicasController < ApplicationController
   before_action :set_juridica, only: [:show, :edit, :update, :destroy]
-  #before_action :set_token, only: [:show]
-  after_action :set_juridica, only: [:set_juridica]
+  after_action :set_juridica, only: [:set_token]
   after_action :set_token, only: [:create, :update]
 
   # GET /juridicas
