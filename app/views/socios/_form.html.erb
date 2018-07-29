@@ -17,8 +17,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :fisica_id %>
-    <%= form.text_field :fisica_id %>
+    <%= form.collection_select :fisica_id, Fisica.all.order(updated_at: :desc), :id, :nome %></br>
   </div>
 
   <div class="field">

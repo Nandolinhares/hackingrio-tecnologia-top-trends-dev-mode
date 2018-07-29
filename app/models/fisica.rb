@@ -5,7 +5,9 @@ class Fisica < ApplicationRecord
     has_many :socios, dependent: :destroy
 
     def self.tokenizer(fisica)
-        payload = { pessoa_fisica: "#{fisica.nome}" }
+        payload = { pessoa_fisica: "#{fisica.nome}",
+                              cpf: "#{fisica.cpf}",
+                         telefone: "#{fisica.telefone}"}
         fisica.token = JWT.encode payload, 'HS256'
         fisica
     end

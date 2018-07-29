@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 		
 	end
 
-	def search
+	def authorization
 		if params[:token].present?
 		  payload = JWT.decode params[:token], 'HS256'
 		end

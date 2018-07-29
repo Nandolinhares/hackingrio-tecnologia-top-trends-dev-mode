@@ -1,7 +1,7 @@
 class FisicasController < ApplicationController
   before_action :set_fisica, only: [:show, :edit, :update, :destroy]
-  after_action :set_fisica, only: [:set_token]
-  after_action :set_token, only: [:create, :update]
+  after_action :set_token_create, only: [:create]
+  after_action :set_token_update, only: [:update]
 
   # GET /fisicas
   # GET /fisicas.json
@@ -69,8 +69,13 @@ class FisicasController < ApplicationController
       @fisica = Fisica.find(params[:id])
     end
 
-    def set_token
+    def set_token_update
       @fisica = Fisica.tokenizer( Fisica.find(params[:id])  )
+      @fisica.update(fisica_params)
+    end
+
+    def set_token_create
+      @fisica = Fisica.tokenizer( Fisica.last  )
       @fisica.update(fisica_params)
     end
 
