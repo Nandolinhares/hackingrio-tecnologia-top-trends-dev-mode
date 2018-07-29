@@ -5,6 +5,53 @@
   <div class="alert alert-success" role="alert"><%= flash[:notice] %></div>
 <% end %>
 
+
+<div class="container">
+
+<!-- Pessoa Física - Perfil e Identidade -->
+
+  <section class="row">
+    <div class="col-xs-12 col-md-6">
+      <%=image_tag("persona-topo.png", size: "200")%>
+      <h3 class="fisica-nome"><%=@fisica.nome%></h3>
+      <h4 class="fisica-sobre">Sobre: Micro-Empresário</h4>
+      <ul class="ul-validate">
+        <li id="validate-bold">Validação:</li>
+        <li class="validates-background">Rede de Contatos</li>
+        <li class="validates-background">Perfil</li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-3 col-md-offset-3">
+      <span>Identidade</span>
+      <%=image_tag("5stars.jpg", size: "140x40")%>
+    </div>
+  </section>
+
+<!-- Resultado das avaliações de pessoas -->
+
+  <section class="row">
+    <div class="col-xs-12 col-md-4 secti-conheco">
+      <h2 class="conheco h2">268</h2><br>
+      <p class="conheco">Conhecidos</p><br>
+      <button class="conheco btn btn-view botoes_fisicas botoes_validate" value="Eu Conheço!">Eu Conheço!</button>
+    </div>
+    <div class="col-xs-12 col-md-4 secti-conheco">
+      <h2 class="conheco h2">1.2K</h2><br>
+      <p class="conheco">Visualizações</p><br>
+      <button class="conheco btn btn-delete botoes_fisicas botoes_validate" value="Eu Conheço!">Ver perfil</button>
+    </div>
+    <div class="col-xs-12 col-md-4 secti-conheco">
+      <h2 class="conheco h2">379</h2><br>
+      <p class="conheco">Sites Autenticados</p><br>
+      <button class="conheco btn btn-edit botoes_fisicas botoes_validate" value="Eu Conheço!"><'/'>Integrações</button>
+    </div>
+  </section>
+</div>
+
+
+
+
+
 <div class="row">
   <div class="col-md-3">
     <%=image_tag("avatarfeminino.jpg", size: "200x200", class: "avatar")%>
@@ -20,7 +67,7 @@
     <input type="text" name="telefone" class="form-control" disabled="disabled" value="<%= @fisica.telefone%>">
     <label>Endereço:</label>
     <input type="text" name="endereco" class="form-control" disabled="disabled" value="<%= @fisica.endereco%>">
-    <label>Nome:</label>
+    <label>Token:</label>
     <input type="text" name="token" class="form-control" disabled="disabled" value="<%= @fisica.token%>">
   </div> 
 </div>
