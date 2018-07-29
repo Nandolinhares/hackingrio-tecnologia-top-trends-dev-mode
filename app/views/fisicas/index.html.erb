@@ -1,10 +1,13 @@
 
+
 <!-- Se tem algum resultado(criação ou atualização, ele vai mandar a mensagem 
   respectiva ao assunto. "Criado com sucesso ou Atualizado com sucesso") -->
 
 <% if flash[:notice] %>
   <div class="alert alert-success" role="alert"><%= flash[:notice] %></div>
 <% end %>
+
+<div class="container">
 
 <!-- Título -->
 
@@ -41,3 +44,4 @@
 <br>
 
 <%= link_to 'Adicionar Pessoa Física', new_fisica_path, class: "btn btn-view botoes_fisicas" %>
+</div>
