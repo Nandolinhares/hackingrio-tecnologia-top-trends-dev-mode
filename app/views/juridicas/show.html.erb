@@ -6,47 +6,25 @@
 <h1><%= @juridica.fantasia%></h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-3">
+    <%=image_tag("empresaavatar.jpg", size: "340x300", class: "avatar")%>
+    <%=image_tag("5stars.jpg", size: "140x40", class: "avatar")%>
+  </div>
+  <div class="col-md-6">
     <label>CNPJ:</label>
     <input type="text" name="cnpj" class="form-control" disabled="disabled" value="<%= @juridica.cnpj%>">
-  </div> 
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Razão Social:</label>
     <input type="text" name="razao" class="form-control" disabled="disabled" value="<%= @juridica.razao%>">
-  </div> 
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Nome Fantasia:</label>
     <input type="text" name="fantasia" class="form-control" disabled="disabled" value="<%= @juridica.fantasia%>">
-  </div> 
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Telefone:</label>
     <input type="text" name="telefone" class="form-control" disabled="disabled" value="<%= @juridica.telefone%>">
-  </div> 
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Endereço:</label>
     <input type="text" name="endereco" class="form-control" disabled="disabled" value="<%= @juridica.endereco%>">
-  </div> 
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Token:</label>
     <input type="text" name="token" class="form-control" disabled="disabled" value="<%= @juridica.token%>">
   </div> 
 </div>
-
 
 <div class="botoes_center">
   <%= link_to 'Editar', edit_juridica_path(@juridica), class: "btn btn-default" %> |

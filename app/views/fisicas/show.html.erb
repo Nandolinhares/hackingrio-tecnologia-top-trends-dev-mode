@@ -6,38 +6,23 @@
 <% end %>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-3">
+    <%=image_tag("avatarfeminino.jpg", size: "200x200", class: "avatar")%>
+    <%=image_tag("5stars.jpg", size: "140x40", class: "avatar")%>
+    <label></label>
+  </div>
+  <div class="col-md-6">
     <label>Nome:</label>
     <input type="text" name="nome" class="form-control" disabled="disabled" value="<%= @fisica.nome%>">
-  </div> 
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>CPF:</label>
     <input type="text" name="cpf" class="form-control" disabled="disabled" value="<%= @fisica.cpf%>">
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Telefone:</label>
     <input type="text" name="telefone" class="form-control" disabled="disabled" value="<%= @fisica.telefone%>">
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Endereço:</label>
     <input type="text" name="endereco" class="form-control" disabled="disabled" value="<%= @fisica.endereco%>">
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
     <label>Nome:</label>
     <input type="text" name="token" class="form-control" disabled="disabled" value="<%= @fisica.token%>">
-  </div>
+  </div> 
 </div>
 
 <div class="botoes_center">

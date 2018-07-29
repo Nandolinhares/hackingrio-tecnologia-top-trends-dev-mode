@@ -111,3 +111,7 @@ h1{
 	text-align: center;
 }
 
+.avatar{
+	margin: 0 auto;
+	display: table;
+}
