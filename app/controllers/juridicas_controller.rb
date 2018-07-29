@@ -1,5 +1,6 @@
 class JuridicasController < ApplicationController
   before_action :set_juridica, only: [:show, :edit, :update, :destroy]
+  after_action :set_token, only: [:create, :update]
 
   # GET /juridicas
   # GET /juridicas.json
@@ -65,6 +66,11 @@ class JuridicasController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_juridica
       @juridica = Juridica.find(params[:id])
+    end
+
+    def set_token
+      @juridica = Juridica.tokenizer
+      @juridica.update!(juridica_params)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

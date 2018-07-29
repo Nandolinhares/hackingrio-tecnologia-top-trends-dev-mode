@@ -19,8 +19,8 @@
         <td><%= socio.fisica.cpf %></td>
         <td><%= socio.administrador ? 'Sim' : 'Não' %></td>   
         <td><%= link_to 'Show', fisica_path(socio.fisica) %></td>
-        <td><%= link_to 'Edit', edit_juridica_socio_path(socio) %></td>
-        <td><%= link_to 'Destroy', juridica_socio_path(socio), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_juridica_socio_path(socio.juridica,socio) %></td>
+        <td><%= link_to 'Destroy', juridica_socio_path(socio.juridica,socio), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
