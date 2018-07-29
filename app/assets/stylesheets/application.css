@@ -78,4 +78,31 @@ h1{
 }
 .menuzin{
 	margin-left: 40px !important;
+	margin-top: -8px;
+}
+
+.btn-view{
+	background-color: #67b7b3;
+	border-color: #67b7b3;
+}
+.btn-view:hover{
+	background-color: #67b7b3;
+}
+.btn-edit{
+	background-color: #fca044;
+	border-color: #fca044;
+}
+.btn-edit:hover{
+	background-color: #fca044;
+}
+.btn-delete{
+	background-color: #ff6969;
+	border-color: #ff6969;
+}
+.btn-delete:hover{
+	background-color: #ff6969;
+}
+
+.botao_add{
+	margin-bottom: 10px;
 }
